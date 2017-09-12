@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165BC2F97BA2FF24F8567AC4 /* libPods-ObjCVKReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2AA49FF74AD269C6D82FCE /* libPods-ObjCVKReaderTests.a */; };
+		D3CEB2F80C61D0158AD369C9 /* libPods-ObjCVKReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D421A2ACACBB0449C06E81 /* libPods-ObjCVKReader.a */; };
 		E5F3D3F01F670E7600A2AA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D3EF1F670E7600A2AA46 /* main.m */; };
 		E5F3D3F31F670E7600A2AA46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D3F21F670E7600A2AA46 /* AppDelegate.m */; };
-		E5F3D3F61F670E7600A2AA46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D3F51F670E7600A2AA46 /* ViewController.m */; };
 		E5F3D3F91F670E7600A2AA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D3F71F670E7600A2AA46 /* Main.storyboard */; };
 		E5F3D3FC1F670E7600A2AA46 /* ObjCVKReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D3FA1F670E7600A2AA46 /* ObjCVKReader.xcdatamodeld */; };
 		E5F3D3FE1F670E7600A2AA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D3FD1F670E7600A2AA46 /* Assets.xcassets */; };
 		E5F3D4011F670E7600A2AA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D3FF1F670E7600A2AA46 /* LaunchScreen.storyboard */; };
 		E5F3D40C1F670E7600A2AA46 /* ObjCVKReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D40B1F670E7600A2AA46 /* ObjCVKReaderTests.m */; };
+		E5F3D41B1F671A3E00A2AA46 /* VSVKAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D41A1F671A3E00A2AA46 /* VSVKAuthenticator.m */; };
+		E5F3D41F1F671DD800A2AA46 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D41E1F671DD800A2AA46 /* LoginViewController.m */; };
+		E5F3D4231F672BAF00A2AA46 /* Newsfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D4221F672BAF00A2AA46 /* Newsfeed.m */; };
+		E5F3D4271F672DD500A2AA46 /* VSNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03A4D9C73D6E289D66BCF1A4 /* Pods-ObjCVKReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCVKReaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCVKReaderTests/Pods-ObjCVKReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11DA0D54CEED05240595839B /* Pods-ObjCVKReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCVKReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCVKReader/Pods-ObjCVKReader.release.xcconfig"; sourceTree = "<group>"; };
+		38B3EE2C3C55E354113628B1 /* Pods-ObjCVKReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCVKReaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCVKReaderTests/Pods-ObjCVKReaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0DC87F7E1106E53B32272F6 /* Pods-ObjCVKReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCVKReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCVKReader/Pods-ObjCVKReader.debug.xcconfig"; sourceTree = "<group>"; };
 		E5F3D3EB1F670E7600A2AA46 /* ObjCVKReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCVKReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F3D3EF1F670E7600A2AA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5F3D3F11F670E7600A2AA46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5F3D3F21F670E7600A2AA46 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E5F3D3F41F670E7600A2AA46 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5F3D3F51F670E7600A2AA46 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E5F3D3F81F670E7600A2AA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5F3D3FB1F670E7600A2AA46 /* ObjCVKReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ObjCVKReader.xcdatamodel; sourceTree = "<group>"; };
 		E5F3D3FD1F670E7600A2AA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +49,16 @@
 		E5F3D4071F670E7600A2AA46 /* ObjCVKReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCVKReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F3D40B1F670E7600A2AA46 /* ObjCVKReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCVKReaderTests.m; sourceTree = "<group>"; };
 		E5F3D40D1F670E7600A2AA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F3D4191F671A3E00A2AA46 /* VSVKAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSVKAuthenticator.h; sourceTree = "<group>"; };
+		E5F3D41A1F671A3E00A2AA46 /* VSVKAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSVKAuthenticator.m; sourceTree = "<group>"; };
+		E5F3D41D1F671DD800A2AA46 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E5F3D41E1F671DD800A2AA46 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E5F3D4211F672BAF00A2AA46 /* Newsfeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsfeed.h; sourceTree = "<group>"; };
+		E5F3D4221F672BAF00A2AA46 /* Newsfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newsfeed.m; sourceTree = "<group>"; };
+		E5F3D4251F672DD500A2AA46 /* VSNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSNewsModel.h; sourceTree = "<group>"; };
+		E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSNewsModel.m; sourceTree = "<group>"; };
+		E6D421A2ACACBB0449C06E81 /* libPods-ObjCVKReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2AA49FF74AD269C6D82FCE /* libPods-ObjCVKReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CEB2F80C61D0158AD369C9 /* libPods-ObjCVKReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,18 +74,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165BC2F97BA2FF24F8567AC4 /* libPods-ObjCVKReaderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		858CA45ECC0BE8773FD0D155 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0DC87F7E1106E53B32272F6 /* Pods-ObjCVKReader.debug.xcconfig */,
+				11DA0D54CEED05240595839B /* Pods-ObjCVKReader.release.xcconfig */,
+				03A4D9C73D6E289D66BCF1A4 /* Pods-ObjCVKReaderTests.debug.xcconfig */,
+				38B3EE2C3C55E354113628B1 /* Pods-ObjCVKReaderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB794F6F9BA534505E105DE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6D421A2ACACBB0449C06E81 /* libPods-ObjCVKReader.a */,
+				FF2AA49FF74AD269C6D82FCE /* libPods-ObjCVKReaderTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5F3D3E21F670E7600A2AA46 = {
 			isa = PBXGroup;
 			children = (
 				E5F3D3ED1F670E7600A2AA46 /* ObjCVKReader */,
 				E5F3D40A1F670E7600A2AA46 /* ObjCVKReaderTests */,
 				E5F3D3EC1F670E7600A2AA46 /* Products */,
+				858CA45ECC0BE8773FD0D155 /* Pods */,
+				DB794F6F9BA534505E105DE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +124,11 @@
 		E5F3D3ED1F670E7600A2AA46 /* ObjCVKReader */ = {
 			isa = PBXGroup;
 			children = (
+				E5F3D4241F672DBD00A2AA46 /* News Feed */,
+				E5F3D4201F672B9300A2AA46 /* Entity */,
+				E5F3D41C1F671DAE00A2AA46 /* Login */,
 				E5F3D3F11F670E7600A2AA46 /* AppDelegate.h */,
 				E5F3D3F21F670E7600A2AA46 /* AppDelegate.m */,
-				E5F3D3F41F670E7600A2AA46 /* ViewController.h */,
-				E5F3D3F51F670E7600A2AA46 /* ViewController.m */,
 				E5F3D3F71F670E7600A2AA46 /* Main.storyboard */,
 				E5F3D3FD1F670E7600A2AA46 /* Assets.xcassets */,
 				E5F3D3FF1F670E7600A2AA46 /* LaunchScreen.storyboard */,
@@ -100,6 +142,8 @@
 		E5F3D3EE1F670E7600A2AA46 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E5F3D4191F671A3E00A2AA46 /* VSVKAuthenticator.h */,
+				E5F3D41A1F671A3E00A2AA46 /* VSVKAuthenticator.m */,
 				E5F3D3EF1F670E7600A2AA46 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -114,6 +158,33 @@
 			path = ObjCVKReaderTests;
 			sourceTree = "<group>";
 		};
+		E5F3D41C1F671DAE00A2AA46 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5F3D41D1F671DD800A2AA46 /* LoginViewController.h */,
+				E5F3D41E1F671DD800A2AA46 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		E5F3D4201F672B9300A2AA46 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E5F3D4211F672BAF00A2AA46 /* Newsfeed.h */,
+				E5F3D4221F672BAF00A2AA46 /* Newsfeed.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		E5F3D4241F672DBD00A2AA46 /* News Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E5F3D4251F672DD500A2AA46 /* VSNewsModel.h */,
+				E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */,
+			);
+			name = "News Feed";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5F3D4101F670E7600A2AA46 /* Build configuration list for PBXNativeTarget "ObjCVKReader" */;
 			buildPhases = (
+				CC432CAD8C8FCDAFACE69BE2 /* [CP] Check Pods Manifest.lock */,
 				E5F3D3E71F670E7600A2AA46 /* Sources */,
 				E5F3D3E81F670E7600A2AA46 /* Frameworks */,
 				E5F3D3E91F670E7600A2AA46 /* Resources */,
+				00E7E421914939D4C7BE6F9F /* [CP] Embed Pods Frameworks */,
+				6E88ADDF6CE0B0A614C49E61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5F3D4131F670E7600A2AA46 /* Build configuration list for PBXNativeTarget "ObjCVKReaderTests" */;
 			buildPhases = (
+				32AC43CA27E7817B4E8F39F8 /* [CP] Check Pods Manifest.lock */,
 				E5F3D4031F670E7600A2AA46 /* Sources */,
 				E5F3D4041F670E7600A2AA46 /* Frameworks */,
 				E5F3D4051F670E7600A2AA46 /* Resources */,
+				270A0069AF1A96393C302B23 /* [CP] Embed Pods Frameworks */,
+				4B907CA1CF9AA20E0FBFA058 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,15 +290,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00E7E421914939D4C7BE6F9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjCVKReader/Pods-ObjCVKReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		270A0069AF1A96393C302B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjCVKReaderTests/Pods-ObjCVKReaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32AC43CA27E7817B4E8F39F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B907CA1CF9AA20E0FBFA058 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjCVKReaderTests/Pods-ObjCVKReaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E88ADDF6CE0B0A614C49E61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjCVKReader/Pods-ObjCVKReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC432CAD8C8FCDAFACE69BE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5F3D3E71F670E7600A2AA46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F3D3F61F670E7600A2AA46 /* ViewController.m in Sources */,
 				E5F3D3F31F670E7600A2AA46 /* AppDelegate.m in Sources */,
+				E5F3D41B1F671A3E00A2AA46 /* VSVKAuthenticator.m in Sources */,
+				E5F3D4231F672BAF00A2AA46 /* Newsfeed.m in Sources */,
 				E5F3D3F01F670E7600A2AA46 /* main.m in Sources */,
 				E5F3D3FC1F670E7600A2AA46 /* ObjCVKReader.xcdatamodeld in Sources */,
+				E5F3D4271F672DD500A2AA46 /* VSNewsModel.m in Sources */,
+				E5F3D41F1F671DD800A2AA46 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +530,7 @@
 		};
 		E5F3D4111F670E7600A2AA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0DC87F7E1106E53B32272F6 /* Pods-ObjCVKReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2YGGD696VB;
@@ -369,6 +543,7 @@
 		};
 		E5F3D4121F670E7600A2AA46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11DA0D54CEED05240595839B /* Pods-ObjCVKReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2YGGD696VB;
@@ -381,6 +556,7 @@
 		};
 		E5F3D4141F670E7600A2AA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A4D9C73D6E289D66BCF1A4 /* Pods-ObjCVKReaderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2YGGD696VB;
@@ -394,6 +570,7 @@
 		};
 		E5F3D4151F670E7600A2AA46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38B3EE2C3C55E354113628B1 /* Pods-ObjCVKReaderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2YGGD696VB;
@@ -424,6 +601,7 @@
 				E5F3D4121F670E7600A2AA46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5F3D4131F670E7600A2AA46 /* Build configuration list for PBXNativeTarget "ObjCVKReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +610,7 @@
 				E5F3D4151F670E7600A2AA46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
