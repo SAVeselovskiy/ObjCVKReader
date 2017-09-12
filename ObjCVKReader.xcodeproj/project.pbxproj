@@ -20,6 +20,11 @@
 		E5F3D41F1F671DD800A2AA46 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D41E1F671DD800A2AA46 /* LoginViewController.m */; };
 		E5F3D4231F672BAF00A2AA46 /* Newsfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D4221F672BAF00A2AA46 /* Newsfeed.m */; };
 		E5F3D4271F672DD500A2AA46 /* VSNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */; };
+		E5FB4FF81F67DD930094BC73 /* VSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB4FF71F67DD930094BC73 /* VSNewsViewController.m */; };
+		E5FB4FFB1F67DE070094BC73 /* VSNewsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB4FFA1F67DE070094BC73 /* VSNewsPresenter.m */; };
+		E5FB4FFD1F67E0E30094BC73 /* NewsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FB4FFC1F67E0E30094BC73 /* NewsList.storyboard */; };
+		E5FB50011F67E5730094BC73 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB50001F67E5730094BC73 /* NewsCell.m */; };
+		E5FB50041F67E7880094BC73 /* NewsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB50031F67E7880094BC73 /* NewsCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,15 @@
 		E5F3D4221F672BAF00A2AA46 /* Newsfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newsfeed.m; sourceTree = "<group>"; };
 		E5F3D4251F672DD500A2AA46 /* VSNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSNewsModel.h; sourceTree = "<group>"; };
 		E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSNewsModel.m; sourceTree = "<group>"; };
+		E5FB4FF61F67DD930094BC73 /* VSNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSNewsViewController.h; sourceTree = "<group>"; };
+		E5FB4FF71F67DD930094BC73 /* VSNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSNewsViewController.m; sourceTree = "<group>"; };
+		E5FB4FF91F67DE070094BC73 /* VSNewsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSNewsPresenter.h; sourceTree = "<group>"; };
+		E5FB4FFA1F67DE070094BC73 /* VSNewsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSNewsPresenter.m; sourceTree = "<group>"; };
+		E5FB4FFC1F67E0E30094BC73 /* NewsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsList.storyboard; sourceTree = "<group>"; };
+		E5FB4FFF1F67E5730094BC73 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		E5FB50001F67E5730094BC73 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		E5FB50021F67E7880094BC73 /* NewsCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCellModel.h; sourceTree = "<group>"; };
+		E5FB50031F67E7880094BC73 /* NewsCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellModel.m; sourceTree = "<group>"; };
 		E6D421A2ACACBB0449C06E81 /* libPods-ObjCVKReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2AA49FF74AD269C6D82FCE /* libPods-ObjCVKReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,10 +193,27 @@
 		E5F3D4241F672DBD00A2AA46 /* News Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E5FB4FFE1F67E54F0094BC73 /* Cells */,
 				E5F3D4251F672DD500A2AA46 /* VSNewsModel.h */,
 				E5F3D4261F672DD500A2AA46 /* VSNewsModel.m */,
+				E5FB4FF61F67DD930094BC73 /* VSNewsViewController.h */,
+				E5FB4FF71F67DD930094BC73 /* VSNewsViewController.m */,
+				E5FB4FF91F67DE070094BC73 /* VSNewsPresenter.h */,
+				E5FB4FFA1F67DE070094BC73 /* VSNewsPresenter.m */,
+				E5FB4FFC1F67E0E30094BC73 /* NewsList.storyboard */,
 			);
 			name = "News Feed";
+			sourceTree = "<group>";
+		};
+		E5FB4FFE1F67E54F0094BC73 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E5FB4FFF1F67E5730094BC73 /* NewsCell.h */,
+				E5FB50001F67E5730094BC73 /* NewsCell.m */,
+				E5FB50021F67E7880094BC73 /* NewsCellModel.h */,
+				E5FB50031F67E7880094BC73 /* NewsCellModel.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +309,7 @@
 				E5F3D4011F670E7600A2AA46 /* LaunchScreen.storyboard in Resources */,
 				E5F3D3FE1F670E7600A2AA46 /* Assets.xcassets in Resources */,
 				E5F3D3F91F670E7600A2AA46 /* Main.storyboard in Resources */,
+				E5FB4FFD1F67E0E30094BC73 /* NewsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,13 +359,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjCVKReaderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B907CA1CF9AA20E0FBFA058 /* [CP] Copy Pods Resources */ = {
@@ -357,9 +392,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ObjCVKReader/Pods-ObjCVKReader-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/VK-ios-sdk/VKSdkResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,13 +410,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjCVKReader-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -389,11 +430,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F3D3F31F670E7600A2AA46 /* AppDelegate.m in Sources */,
+				E5FB50041F67E7880094BC73 /* NewsCellModel.m in Sources */,
 				E5F3D41B1F671A3E00A2AA46 /* VSVKAuthenticator.m in Sources */,
 				E5F3D4231F672BAF00A2AA46 /* Newsfeed.m in Sources */,
 				E5F3D3F01F670E7600A2AA46 /* main.m in Sources */,
 				E5F3D3FC1F670E7600A2AA46 /* ObjCVKReader.xcdatamodeld in Sources */,
 				E5F3D4271F672DD500A2AA46 /* VSNewsModel.m in Sources */,
+				E5FB4FF81F67DD930094BC73 /* VSNewsViewController.m in Sources */,
+				E5FB4FFB1F67DE070094BC73 /* VSNewsPresenter.m in Sources */,
+				E5FB50011F67E5730094BC73 /* NewsCell.m in Sources */,
 				E5F3D41F1F671DD800A2AA46 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

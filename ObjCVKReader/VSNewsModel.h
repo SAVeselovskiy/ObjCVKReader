@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VSNewsModel : NSObject
+@protocol VSNewsModelProtocol <NSObject>
 - (void) loadNewsWithCount: (NSInteger) count startFrom: (NSString*) startFrom;
+@end
+
+@interface VSNewsModel : NSObject <VSNewsModelProtocol>
+
 @end

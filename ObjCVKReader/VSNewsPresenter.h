@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface VSNewsPresenter : NSObject
+@protocol VSNewsPresenterProtocol <NSObject>
+- (void) viewDidLoad;
+@end
+
+@interface VSNewsPresenter : NSObject <VSNewsPresenterProtocol, UITableViewDataSource>
 
 @end

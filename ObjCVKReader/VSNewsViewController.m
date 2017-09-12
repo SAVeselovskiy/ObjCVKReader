@@ -7,16 +7,26 @@
 //
 
 #import "VSNewsViewController.h"
+#import "VSNewsPresenter.h"
 
 @interface VSNewsViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) id<VSNewsPresenterProtocol, UITableViewDataSource> presenter;
 @end
 
 @implementation VSNewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
+    self.presenter = [[VSNewsPresenter alloc] init];
+    [self.presenter viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void) reloadView{
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

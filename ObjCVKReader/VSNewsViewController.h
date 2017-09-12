@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VSNewsViewController : UIViewController
+@protocol VSNewsViewProtocol <NSObject>
+- (void) reloadView;
+@end
+
+@interface VSNewsViewController : UIViewController <VSNewsViewProtocol>
 
 @end

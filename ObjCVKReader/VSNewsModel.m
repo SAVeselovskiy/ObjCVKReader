@@ -9,8 +9,22 @@
 #import "VSNewsModel.h"
 #import <VK-ios-sdk/VKSdk.h>
 #import "Newsfeed.h"
+#import "VSNewsPresenter.h"
+
+@interface VSNewsModel ()
+@property (weak, nonatomic) id <VSNewsPresenterProtocol> presenter;
+@end
 
 @implementation VSNewsModel
+
+- (instancetype)initWithPresenter:(id <VSNewsPresenterProtocol>) preseneter
+{
+    self = [super init];
+    if (self) {
+        self.presenter = preseneter;
+    }
+    return self;
+}
 
 - (void) loadNewsWithCount: (NSInteger) count startFrom: (NSString*) startFrom{
     NSDictionary *params;

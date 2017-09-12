@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NewsCell.h"
+#import "Newsfeed.h"
 
 @interface NewsCellModel : NSObject
-
+- (void) fillCell:(NewsCell*) cell;
 @end
