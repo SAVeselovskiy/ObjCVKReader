@@ -9,7 +9,6 @@
 #import "VSNewsModel.h"
 #import <VK-ios-sdk/VKSdk.h>
 #import "Newsfeed.h"
-#import "VSNewsPresenter.h"
 
 @interface VSNewsModel ()
 @property (weak, nonatomic) id <VSNewsPresenterProtocol> presenter;
@@ -37,7 +36,7 @@
     VKRequest *req = [VKRequest requestWithMethod:@"newsfeed.get" parameters:params];
     [req executeWithResultBlock:^(VKResponse *response) {
         NSArray* result = [self parseNewsFeedResponse:response.json];
-        [self.presenter didLoadNewsPart:result];
+        [self.presenter didLoadNewsPart:result startFrom:response.json[@"next_from"]];
     } errorBlock:^(NSError *error) {
         [self.presenter didFailLoadNews:error];
     }];
@@ -68,24 +67,23 @@
                 break;
             }
         }
-        feed.source_name = [self findSourceNameWithId:feed.source_id item:item];
-        feed.source_photo = [self findSourcePhotoWithId:feed.source_id item:item];
+        feed.source_name = [self findSourceNameWithId:feed.source_id item:item groups:response[@"groups"] profiles:response[@"profiles"]];
+        feed.source_photo = [self findSourcePhotoWithId:feed.source_id item:item groups:response[@"groups"] profiles:response[@"profiles"]];
         [news addObject:feed];
         
     }
     return news.copy;
 }
 
-- (NSString*) findSourceNameWithId: (long) source_id item: (NSDictionary*) item{
+- (NSString*) findSourceNameWithId: (long) source_id item: (NSDictionary*) item groups: (NSArray*) groups profiles: (NSArray*) profiles{
     if (source_id < 0) {
-        NSArray *groups = item[@"groups"];
+        source_id = source_id*(-1);
         groups = [groups filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
             return [evaluatedObject[@"id"] longValue] == source_id;
         }]];
         return groups.firstObject[@"name"];
     }
     else{
-        NSArray *profiles = item[@"profiles"];
         profiles = [profiles filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
             return [evaluatedObject[@"id"] longValue] == source_id;
         }]];
@@ -94,13 +92,14 @@
     }
 }
 
-- (NSURL*) findSourcePhotoWithId: (long) source_id item: (NSDictionary*) item{
+- (NSURL*) findSourcePhotoWithId: (long) source_id item: (NSDictionary*) item groups: (NSArray*) groups profiles: (NSArray*) profiles{
     NSArray *items;
     if (source_id < 0) {
-        items = item[@"groups"];
+        source_id = source_id*(-1);
+        items = groups;
     }
     else{
-        items = item[@"profiles"];
+        items = profiles;
     }
     items = [items filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
         return [evaluatedObject[@"id"] longValue] == source_id;

@@ -9,19 +9,25 @@
 #import "VSNewsViewController.h"
 #import "VSNewsPresenter.h"
 
-@interface VSNewsViewController ()
+@interface VSNewsViewController () <UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) id<VSNewsPresenterProtocol, UITableViewDataSource> presenter;
 @end
 
 @implementation VSNewsViewController
 
++ (VSNewsViewController *) instantiate{
+    return [[UIStoryboard storyboardWithName:@"NewsList" bundle:nil] instantiateInitialViewController];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0;
-    self.presenter = [[VSNewsPresenter alloc] init];
+    self.presenter = [[VSNewsPresenter alloc] initWithView:self];
     [self.presenter viewDidLoad];
+    self.tableView.dataSource = self.presenter;
+    self.tableView.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -32,6 +38,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark VSNewsViewProtocol
+
+- (void) showError:(NSError *)error{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"") message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark UITableViewDelegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.presenter didClickOnCellWithIndex:indexPath.row];
 }
 
 /*

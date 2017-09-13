@@ -21,4 +21,5 @@
 @property long post_id;
 @property NSString *source_name;
 @property NSURL *source_photo;
+@property NSString *next_from;
 @end

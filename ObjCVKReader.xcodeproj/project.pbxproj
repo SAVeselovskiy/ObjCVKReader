@@ -25,6 +25,7 @@
 		E5FB4FFD1F67E0E30094BC73 /* NewsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FB4FFC1F67E0E30094BC73 /* NewsList.storyboard */; };
 		E5FB50011F67E5730094BC73 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB50001F67E5730094BC73 /* NewsCell.m */; };
 		E5FB50041F67E7880094BC73 /* NewsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB50031F67E7880094BC73 /* NewsCellModel.m */; };
+		E5FB500A1F693A190094BC73 /* LoadingIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB50091F693A190094BC73 /* LoadingIndicatorCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		E5FB50001F67E5730094BC73 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		E5FB50021F67E7880094BC73 /* NewsCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCellModel.h; sourceTree = "<group>"; };
 		E5FB50031F67E7880094BC73 /* NewsCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellModel.m; sourceTree = "<group>"; };
+		E5FB50081F693A190094BC73 /* LoadingIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingIndicatorCell.h; sourceTree = "<group>"; };
+		E5FB50091F693A190094BC73 /* LoadingIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingIndicatorCell.m; sourceTree = "<group>"; };
 		E6D421A2ACACBB0449C06E81 /* libPods-ObjCVKReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2AA49FF74AD269C6D82FCE /* libPods-ObjCVKReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCVKReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,6 +215,8 @@
 				E5FB50001F67E5730094BC73 /* NewsCell.m */,
 				E5FB50021F67E7880094BC73 /* NewsCellModel.h */,
 				E5FB50031F67E7880094BC73 /* NewsCellModel.m */,
+				E5FB50081F693A190094BC73 /* LoadingIndicatorCell.h */,
+				E5FB50091F693A190094BC73 /* LoadingIndicatorCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -368,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B907CA1CF9AA20E0FBFA058 /* [CP] Copy Pods Resources */ = {
@@ -419,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,6 +442,7 @@
 				E5F3D3FC1F670E7600A2AA46 /* ObjCVKReader.xcdatamodeld in Sources */,
 				E5F3D4271F672DD500A2AA46 /* VSNewsModel.m in Sources */,
 				E5FB4FF81F67DD930094BC73 /* VSNewsViewController.m in Sources */,
+				E5FB500A1F693A190094BC73 /* LoadingIndicatorCell.m in Sources */,
 				E5FB4FFB1F67DE070094BC73 /* VSNewsPresenter.m in Sources */,
 				E5FB50011F67E5730094BC73 /* NewsCell.m in Sources */,
 				E5F3D41F1F671DD800A2AA46 /* LoginViewController.m in Sources */,

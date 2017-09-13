@@ -11,5 +11,6 @@
 #import "Newsfeed.h"
 
 @interface NewsCellModel : NSObject
+- (instancetype)initWithEntity:(Newsfeed*) feed;
 - (void) fillCell:(NewsCell*) cell;
 @end

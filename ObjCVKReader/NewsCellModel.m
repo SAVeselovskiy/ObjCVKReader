@@ -26,15 +26,15 @@
 - (void) fillCell:(NewsCell *)cell{
     cell.feedTextLabel.text = self.feed.text;
     cell.authorName.text = self.feed.source_name;
-    NSString *likesString = [NSString stringWithFormat:@"%ld", self.feed.likes_count];
+    NSString *likesString = [NSString stringWithFormat:@"%d", self.feed.likes_count];
     if (self.feed.likes_count > 1000) {
         double likeCount = (double)self.feed.likes_count/1000;
         likesString = [NSString stringWithFormat:@"%.02fK", likeCount];
     }
     cell.likeCountLabel.text = likesString;
     
-    NSString *repostsString = [NSString stringWithFormat:@"%ld", self.feed.reposts_count];
-    if (self.feed.likes_count > 1000) {
+    NSString *repostsString = [NSString stringWithFormat:@"%d", self.feed.reposts_count];
+    if (self.feed.reposts_count > 1000) {
         double repostsCount = (double)self.feed.reposts_count/1000;
         repostsString = [NSString stringWithFormat:@"%.02fK", repostsCount];
     }

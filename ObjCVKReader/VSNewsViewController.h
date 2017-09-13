@@ -10,9 +10,9 @@
 
 @protocol VSNewsViewProtocol <NSObject>
 - (void) reloadView;
-//- (void) show
+- (void) showError:(NSError*) error;
 @end
 
 @interface VSNewsViewController : UIViewController <VSNewsViewProtocol>
-
++ (VSNewsViewController *) instantiate;
 @end

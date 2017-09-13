@@ -9,7 +9,8 @@
 #import "LoginViewController.h"
 #import "VSVKAuthenticator.h"
 #import <VK-ios-sdk/VKSdk.h>
-#import "VSNewsModel.h"
+#import "VSNewsViewController.h"
+
 
 @interface LoginViewController ()
 
@@ -32,9 +33,7 @@
         NSLog(@"Failure");
     };
     vkAuthenticator.successClosure = ^(VKAccessToken * _Nullable token) {
-//        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"VKAccessToken"];
-        
-        [[VSNewsModel new] loadNewsWithCount:10 startFrom:nil];
+        [self showViewController:[VSNewsViewController instantiate] sender:self];
     };
     [vkAuthenticator signIn];
 //    [vkAuthenticator cleanClosures];

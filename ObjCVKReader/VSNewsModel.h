@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VSNewsPresenter.h"
 
 @protocol VSNewsModelProtocol <NSObject>
 - (void) loadNewsWithCount: (NSInteger) count startFrom: (NSString*) startFrom;
+- (instancetype)initWithPresenter:(id <VSNewsPresenterProtocol>) preseneter;
 @end
 
 @interface VSNewsModel : NSObject <VSNewsModelProtocol>
