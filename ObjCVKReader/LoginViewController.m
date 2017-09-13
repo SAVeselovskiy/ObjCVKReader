@@ -31,15 +31,17 @@
 }
 - (IBAction)authAction:(id)sender {
     _vkAuthenticator = [[VSVKAuthenticator alloc] initWithPresenter:self];
-    _vkAuthenticator.failureClosure = ^(NSError * _Nullable error) {
-        NSLog(@"Failure");
-    };
     __weak typeof(self) weakSelf = self;
+    _vkAuthenticator.failureClosure = ^(NSError * _Nullable error) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"") message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:ok];
+        [weakSelf presentViewController:alert animated:YES completion:nil];
+    };
     _vkAuthenticator.successClosure = ^(VKAccessToken * _Nullable token) {
         [weakSelf showViewController:[VSNewsViewController instantiate] sender:weakSelf];
     };
     [_vkAuthenticator signIn];
-//    [vkAuthenticator cleanClosures];
 }
 
 /*
