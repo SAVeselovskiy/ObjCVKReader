@@ -22,4 +22,6 @@
 @property NSString *source_name;
 @property NSURL *source_photo;
 @property NSString *next_from;
+@property NSInteger photoWidth;
+@property NSInteger photoHeight;
 @end

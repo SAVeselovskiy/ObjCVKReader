@@ -12,6 +12,7 @@
 @interface VSNewsViewController () <UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) id<VSNewsPresenterProtocol, UITableViewDataSource> presenter;
+@property UIRefreshControl *refreshControl;
 @end
 
 @implementation VSNewsViewController
@@ -28,7 +29,11 @@
     [self.presenter viewDidLoad];
     self.tableView.dataSource = self.presenter;
     self.tableView.delegate = self;
+    self.title = NSLocalizedString(@"News", @"");
     // Do any additional setup after loading the view.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
 }
 
 - (void) reloadView{
@@ -40,6 +45,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) refresh{
+    [self.presenter refreshList];
+}
+
 #pragma mark VSNewsViewProtocol
 
 - (void) showError:(NSError *)error{
@@ -48,10 +57,18 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void) endRefreshing{
+    [self.refreshControl endRefreshing];
+}
+
 #pragma mark UITableViewDelegate
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.presenter didClickOnCellWithIndex:indexPath.row];
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.01;
 }
 
 /*

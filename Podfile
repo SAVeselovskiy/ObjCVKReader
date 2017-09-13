@@ -7,6 +7,7 @@ target 'ObjCVKReader' do
 
   # Pods for ObjCVKReader
   pod 'VK-ios-sdk'
+  pod 'SDWebImage'
   target 'ObjCVKReaderTests' do
     inherit! :search_paths
     # Pods for testing

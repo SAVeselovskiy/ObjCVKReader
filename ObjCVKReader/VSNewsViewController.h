@@ -11,6 +11,7 @@
 @protocol VSNewsViewProtocol <NSObject>
 - (void) reloadView;
 - (void) showError:(NSError*) error;
+- (void) endRefreshing;
 @end
 
 @interface VSNewsViewController : UIViewController <VSNewsViewProtocol>

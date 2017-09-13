@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *likeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repostCountLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *feedImageViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *repostImageView;
 @end

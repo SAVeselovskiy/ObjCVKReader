@@ -13,7 +13,8 @@
 
 
 @interface LoginViewController ()
-
+@property VSVKAuthenticator* vkAuthenticator;
+@property (weak, nonatomic) IBOutlet UIButton *authButton;
 @end
 
 @implementation LoginViewController
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.authButton.layer.cornerRadius = 7.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,14 +30,15 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)authAction:(id)sender {
-    VSVKAuthenticator *vkAuthenticator = [[VSVKAuthenticator alloc] initWithPresenter:self];
-    vkAuthenticator.failureClosure = ^(NSError * _Nullable error) {
+    _vkAuthenticator = [[VSVKAuthenticator alloc] initWithPresenter:self];
+    _vkAuthenticator.failureClosure = ^(NSError * _Nullable error) {
         NSLog(@"Failure");
     };
-    vkAuthenticator.successClosure = ^(VKAccessToken * _Nullable token) {
-        [self showViewController:[VSNewsViewController instantiate] sender:self];
+    __weak typeof(self) weakSelf = self;
+    _vkAuthenticator.successClosure = ^(VKAccessToken * _Nullable token) {
+        [weakSelf showViewController:[VSNewsViewController instantiate] sender:weakSelf];
     };
-    [vkAuthenticator signIn];
+    [_vkAuthenticator signIn];
 //    [vkAuthenticator cleanClosures];
 }
 

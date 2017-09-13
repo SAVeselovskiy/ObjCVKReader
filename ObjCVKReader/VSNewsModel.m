@@ -64,13 +64,23 @@
             NSString *photoUrl = photo[@"photo"][@"photo_604"];
             if (photoUrl){
                 feed.photoURL = [NSURL URLWithString:photoUrl];
+                feed.photoWidth = [photo[@"photo"][@"width"] integerValue];
+                feed.photoHeight = [photo[@"photo"][@"height"] integerValue];
                 break;
+            }
+            else if (photo[@"photo"][@"photo_1280"]){
+                feed.photoURL = [NSURL URLWithString:photo[@"photo"][@"photo_1280"]];
+                feed.photoWidth = [photo[@"photo"][@"width"] integerValue];
+                feed.photoHeight = [photo[@"photo"][@"height"] integerValue];
+                break;
+            }
+            else {
+                NSLog(@"THERE IS NO URL");
             }
         }
         feed.source_name = [self findSourceNameWithId:feed.source_id item:item groups:response[@"groups"] profiles:response[@"profiles"]];
         feed.source_photo = [self findSourcePhotoWithId:feed.source_id item:item groups:response[@"groups"] profiles:response[@"profiles"]];
         [news addObject:feed];
-        
     }
     return news.copy;
 }

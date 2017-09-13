@@ -48,11 +48,20 @@
     for (Newsfeed *feed in newsFeed) {
         [self.cellModels addObject:[[NewsCellModel alloc] initWithEntity:feed]];
     }
+    [self.view endRefreshing];
     [self.view reloadView];
 }
 
 - (void) didFailLoadNews:(NSError *)error{
+    [self.view endRefreshing];
     [self.view showError:error];
+}
+
+- (void) refreshList{
+    [self.cellModels removeAllObjects];
+    self.isLoading = YES;
+    self.start_from = nil;
+    [self.model loadNewsWithCount:self.pageSize startFrom:self.start_from];
 }
 
 #pragma mark UITableViewDataSource

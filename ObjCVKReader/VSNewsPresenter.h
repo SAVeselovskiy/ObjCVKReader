@@ -17,6 +17,7 @@
 - (void) didFailLoadNews:(NSError*) error;
 - (instancetype)initWithView:(id <VSNewsViewProtocol>) view;
 - (void) didClickOnCellWithIndex:(NSInteger) index;
+- (void) refreshList;
 @end
 
 @interface VSNewsPresenter : NSObject <VSNewsPresenterProtocol, UITableViewDataSource>

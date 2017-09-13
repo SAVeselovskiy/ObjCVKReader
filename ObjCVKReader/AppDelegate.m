@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "VSVKAuthenticator.h"
+#import <VK-ios-sdk/VKSdk.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:66/255.0 green:112/255.0 blue:255/255.0 alpha:1.0];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     return YES;
 }
 

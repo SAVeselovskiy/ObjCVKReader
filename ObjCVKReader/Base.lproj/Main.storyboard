@@ -21,9 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="0kj-Nq-z50">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqL-26-hgl">
-                                <rect key="frame" x="171" y="318" width="32" height="30"/>
-                                <state key="normal" title="Auth"/>
+                                <rect key="frame" x="97" y="313" width="180" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aof-eS-stC"/>
+                                    <constraint firstAttribute="width" constant="180" id="rou-p4-nYC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleColor" red="0.30116873979568481" green="0.41164913773536682" blue="0.60671621561050415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="authAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpg-vn-cwC"/>
                                 </connections>
@@ -31,13 +42,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0kj-Nq-z50" secondAttribute="trailing" id="AOL-3j-BnE"/>
                             <constraint firstItem="OqL-26-hgl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LCa-cg-q6Z"/>
                             <constraint firstItem="OqL-26-hgl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TIw-Ty-5hT"/>
+                            <constraint firstItem="0kj-Nq-z50" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cqq-bR-mRT"/>
+                            <constraint firstItem="0kj-Nq-z50" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g7d-1R-Kg7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0kj-Nq-z50" secondAttribute="bottom" id="nOY-Dr-fzy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="OqL-26-hgl" id="bxL-Wb-7B3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_bg" width="400" height="400"/>
+    </resources>
 </document>

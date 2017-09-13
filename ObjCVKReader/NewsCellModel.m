@@ -7,6 +7,7 @@
 //
 
 #import "NewsCellModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NewsCellModel()
 @property Newsfeed *feed;
@@ -39,6 +40,17 @@
         repostsString = [NSString stringWithFormat:@"%.02fK", repostsCount];
     }
     cell.repostCountLabel.text = repostsString;
+    [cell.authorImageView sd_setImageWithURL:self.feed.source_photo placeholderImage:[UIImage imageNamed:@"ic_user"]];
+    cell.authorImageView.layer.cornerRadius = 25;
+    cell.authorImageView.clipsToBounds = YES;
+    
+    if (_feed.photoURL){
+        double aspectRatio = (double)_feed.photoHeight/_feed.photoWidth;
+        double imageViewHeight = cell.frame.size.width*aspectRatio;
+        cell.feedImageViewHeightConstraint.constant = imageViewHeight;
+        [cell.feedImageView sd_setImageWithURL:self.feed.photoURL placeholderImage:[UIImage imageNamed:@"ic_photo"]];
+    }
+    
 }
 
 @end
