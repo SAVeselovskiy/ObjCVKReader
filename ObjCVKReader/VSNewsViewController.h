@@ -10,6 +10,7 @@
 
 @protocol VSNewsViewProtocol <NSObject>
 - (void) reloadView;
+//- (void) show
 @end
 
 @interface VSNewsViewController : UIViewController <VSNewsViewProtocol>

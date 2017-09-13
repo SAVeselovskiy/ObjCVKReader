@@ -36,9 +36,10 @@
     }
     VKRequest *req = [VKRequest requestWithMethod:@"newsfeed.get" parameters:params];
     [req executeWithResultBlock:^(VKResponse *response) {
-        [self parseNewsFeedResponse:response.json];
+        NSArray* result = [self parseNewsFeedResponse:response.json];
+        [self.presenter didLoadNewsPart:result];
     } errorBlock:^(NSError *error) {
-        NSLog(@"");
+        [self.presenter didFailLoadNews:error];
     }];
 }
 
@@ -76,11 +77,36 @@
 }
 
 - (NSString*) findSourceNameWithId: (long) source_id item: (NSDictionary*) item{
-    return @"";
+    if (source_id < 0) {
+        NSArray *groups = item[@"groups"];
+        groups = [groups filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+            return [evaluatedObject[@"id"] longValue] == source_id;
+        }]];
+        return groups.firstObject[@"name"];
+    }
+    else{
+        NSArray *profiles = item[@"profiles"];
+        profiles = [profiles filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+            return [evaluatedObject[@"id"] longValue] == source_id;
+        }]];
+        
+        return [NSString stringWithFormat:@"%@ %@", profiles.firstObject[@"first_name"], profiles.firstObject[@"last_name"]];
+    }
 }
 
 - (NSURL*) findSourcePhotoWithId: (long) source_id item: (NSDictionary*) item{
-    return [NSURL URLWithString:@""];
+    NSArray *items;
+    if (source_id < 0) {
+        items = item[@"groups"];
+    }
+    else{
+        items = item[@"profiles"];
+    }
+    items = [items filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        return [evaluatedObject[@"id"] longValue] == source_id;
+    }]];
+    NSString* photoURL = items.firstObject[@"photo_50"];
+    return [NSURL URLWithString:photoURL];
 }
 
 @end

@@ -10,10 +10,12 @@
 #import "VSNewsViewController.h"
 #import "NewsCell.h"
 #import "VSNewsModel.h"
+#import "NewsCellModel.h"
 
 @interface VSNewsPresenter ()
 @property (weak, nonatomic) id <VSNewsViewProtocol> view;
 @property (nonatomic) id <VSNewsModelProtocol> model;
+@property NSArray<NewsCellModel *> * cellModels;
 @end
 
 @implementation VSNewsPresenter
@@ -26,6 +28,20 @@
         self.model = [[VSNewsModel alloc] init];
     }
     return self;
+}
+
+#pragma mark VSNewsPresenterProtocol
+
+- (void) viewDidLoad{
+    [self.model loadNewsWithCount:10 startFrom:nil];
+}
+
+- (void) didLoadNewsPart:(NSArray<Newsfeed *> *)newsFeed{
+    
+}
+
+- (void) didFailLoadNews:(NSError *)error{
+    
 }
 
 #pragma mark UITableViewDataSource

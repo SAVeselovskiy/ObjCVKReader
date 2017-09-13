@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Newsfeed.h"
 
-@protocol VSNewsPresenterProtocol <NSObject>
+@protocol VSNewsPresenterProtocol <NSObject> //надо бы разделить по двум протоколам
 - (void) viewDidLoad;
+- (void) didLoadNewsPart: (NSArray<Newsfeed *>*) newsFeed;
+- (void) didFailLoadNews:(NSError*) error;
 @end
 
 @interface VSNewsPresenter : NSObject <VSNewsPresenterProtocol, UITableViewDataSource>
